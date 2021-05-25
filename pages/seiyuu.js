@@ -17,9 +17,23 @@ Page({
     let that = this;
     seiyuu.getSeiyuuHomeList().then(
       res => {
-        console.log(res)
+        const per_row = 4
+        let items_group = []
+        let group = []
+        res.info.Datas.forEach(item => {
+          if (group.length === per_row) {
+            items_group.push(group)
+            group = [item]
+          } else {
+            group.push(item)
+          }
+        });
+        if (group.length > 0) {
+          items_group.push(group)
+        }
+        console.log(items_group)
         that.setData({
-          seiyuuList: res.info.Datas
+          seiyuuList: items_group
         })
       }
     );
