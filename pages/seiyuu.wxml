@@ -1,8 +1,12 @@
 <view class="page" data-weui-theme="{{theme}}">
+  <view class="filter">
+    <button class="filter-button {{item}}" wx:for="{{filter_list}}" wx:for-item="item" style="display: flex;flex-direction: row;width: 80rpx;">
+      {{item}}
+    </button>
+  </view>
   <view class="catalog">
-
     <scroll-view class="cate" scroll-x="false">
-        <view class="items" wx:for="{{seiyuuList}}" wx:for-item="items"  style="display: flex;flex-direction: row;">
+        <view class="items" wx:for="{{seiyuu_list}}" wx:for-item="items"  style="display: flex;flex-direction: row;">
           <view class="per-row" wx:if="{{items.length > 0}}" wx:for="{{items}}" wx:for-item="item">
 
             <view class="content" wx:if="{{item.id.length > 0}}" style="display: flex;flex-direction: column;">

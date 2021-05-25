@@ -2,7 +2,8 @@ const seiyuu = require("../apis/seiyuu");
 
 Page({
   data: {
-    seiyuuList: []
+    filter_list: ['all', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'other'],
+    seiyuu_list: []
   },
   onShow: function() {
     this.getSeiyuuHomeList()
@@ -33,7 +34,7 @@ Page({
         }
         console.log(items_group)
         that.setData({
-          seiyuuList: items_group
+          seiyuu_list: items_group
         })
       }
     );
