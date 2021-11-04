@@ -1,13 +1,16 @@
 {
-  "pages":[
-    "index/index", "pages/seiyuu"
+  "pages": [
+    "index/index",
+    "pages/seiyuu/seiyuu",
+    "pages/sydetail/sydetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Seiyuu",
-    "navigationBarTextStyle":"black",
-    "enablePullDownRefresh":true
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 0
   },
   "networkTimeout": {
     "request": 20000,
@@ -19,11 +22,13 @@
     "list": [
       {
         "pagePath": "index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "images/tab_index.png"
       },
       {
-        "pagePath": "pages/seiyuu",
-        "text": "广场"
+        "pagePath": "pages/seiyuu/seiyuu",
+        "text": "广场",
+        "iconPath": "images/tab_sy.png"
       }
     ]
   },

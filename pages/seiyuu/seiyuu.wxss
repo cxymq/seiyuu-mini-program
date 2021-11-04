@@ -1,8 +1,9 @@
-page {
+.page {
   height: 100%;
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .filter {
   background: #fafafa;
@@ -12,6 +13,7 @@ page {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10rpx 10rpx 10rpx 10rpx;
+  margin-bottom: 50rpx;
 }
 .filter-button {
   padding: 10rpx 10rpx 10rpx 10rpx;
@@ -22,9 +24,13 @@ page {
   line-height: 60rpx;
   text-align: center;
 }
-.other {
-  margin-left: 0rpx;
-  padding-left: 0rpx;
+
+.gap-line {
+  width: 98%;
+  height: 0.6rpx;
+  background-color: #666;
+  margin-left: 10rpx;
+  margin-bottom: 50rpx;
 }
 .catalog {
   background: #fafafa;

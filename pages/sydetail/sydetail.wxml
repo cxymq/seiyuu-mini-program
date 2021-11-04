@@ -1,0 +1,6 @@
+<!--pages/sydetail/sydetail.wxml-->
+
+<sydetail_header></sydetail_header>
+<scroll-view>
+
+</scroll-view>

@@ -1,8 +1,8 @@
 const api = require("./api");
 
-const seiyuu_local = require('../apis/seiyuu.json.js').seiyuuHomeList;
-function getSeiyuuHomeList(params) {
-  let urlStr = api.SeiyuuHomePageList
+const sydetail_local = require('../apis/sydetail.json').seiyuuDetail;
+function getSeiyuuDetail(params) {
+  let urlStr = api.SeiyuuDetail
   let paramsStr = ''
   if (Object.keys(params) > 0) {
     Object.keys(params).forEach(function (value) {
@@ -20,11 +20,11 @@ function getSeiyuuHomeList(params) {
     //   }),
     //   fail: reject
     // })
-    reslove(seiyuu_local)
+    reslove(sydetail_local)
   });
   
 }
 
 module.exports = {
-  getSeiyuuHomeList,
+  getSeiyuuDetail,
 }

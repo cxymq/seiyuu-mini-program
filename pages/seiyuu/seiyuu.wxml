@@ -1,15 +1,16 @@
-<view class="page" data-weui-theme="{{theme}}">
+<view class="page">
   <view class="filter">
     <button class="filter-button {{item}}" wx:for="{{filter_list}}" wx:for-item="item" style="display: flex;flex-direction: row;width: 80rpx;">
       {{item}}
     </button>
   </view>
+  <view class="gap-line"></view>
   <view class="catalog">
     <scroll-view class="cate" scroll-x="false">
         <view class="items" wx:for="{{seiyuu_list}}" wx:for-item="items"  style="display: flex;flex-direction: row;">
           <view class="per-row" wx:if="{{items.length > 0}}" wx:for="{{items}}" wx:for-item="item">
 
-            <view class="content" wx:if="{{item.id.length > 0}}" style="display: flex;flex-direction: column;">
+            <view class="content" wx:if="{{item.id.length > 0}}" style="display: flex;flex-direction: column;" data-syid="{{item.id}}" bindtap="getSyDetail">
 
               <image mode='scaleToFill' style="width:120rpx;height:120rpx;border-radius: 50%;" src='{{item.avatar}}'>
               </image>
